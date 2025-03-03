@@ -1,1 +1,1 @@
-# API-React-Film
+# API-React-Film, this is an application with React that attacks a movie API. This API is: https://www.omdbapi.com/ and returns movies, series and games. The program has been created to perform filtering in these three ways. .jsx has been used, creating components and for the Tailwind styles.
