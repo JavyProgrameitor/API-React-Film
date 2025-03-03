@@ -16,12 +16,11 @@ const MoviesList = ({ searchParams }) => {
     const fetchMovies = async () => {
       if (!searchParams.param.trim()) return;
 
-      // Convertir searchParams a string para comparar con la última búsqueda
+      //Change the searchParams object to a string
       const currentSearch = JSON.stringify(searchParams);
       if (lastSearch.current === currentSearch) return;
       lastSearch.current = currentSearch;
 
-      // Construir la URL base
       let baseUrl = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchParams.param}`;
       if (searchParams.year.trim() !== "") {
         baseUrl += `&y=${searchParams.year}`;
